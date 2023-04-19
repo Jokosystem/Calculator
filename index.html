@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice moderne</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #calculator {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+        }
+        #display {
+            grid-column: span 4;
+            text-align: right;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            border: none;
+            background-color: #eee;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+        }
+        button:hover {
+            background-color: #ddd;
+        }
+        button:active {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input id="display" type="text" readonly>
+        <button onclick="addNumber(7)">7</button>
+        <button onclick="addNumber(8)">8</button>
+        <button onclick="addNumber(9)">9</button>
+        <button onclick="addOperator('/')">/</button>
+        <button onclick="addNumber(4)">4</button>
+        <button onclick="addNumber(5)">5</button>
+        <button onclick="addNumber(6)">6</button>
+        <button onclick="addOperator('*')">*</button>
+        <button onclick="addNumber(1)">1</button>
+        <button onclick="addNumber(2)">2</button>
+        <button onclick="addNumber(3)">3</button>
+        <button onclick="addOperator('-')">-</button>
+        <button onclick="addNumber(0)">0</button>
+        <button onclick="addDecimalPoint()">.</button>
+        <button onclick="deleteLastDigit()">&larr;</button>
+        <button onclick="addOperator('+')">+</button>
+        <button onclick="clearDisplay()" style="grid-column: span 2">C</button>
+        <button onclick="calculateResult()" style="grid-column: span 2">=</button>
+    </div>
+    <script src="calculatrice.js"></script>
+</body>
+</html>
