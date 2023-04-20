@@ -29,21 +29,42 @@
             padding: 0.5rem;
             border: 1px solid #ccc;
             border-radius: 5px;
+            background-color: #e6e6e6;
+            color: #333;
         }
         button {
             font-size: 1.2rem;
             padding: 0.5rem;
             border: none;
-            background-color: #eee;
+            background-color: #4caf50;
+            color: #fff;
             border-radius: 5px;
             cursor: pointer;
             outline: none;
         }
         button:hover {
-            background-color: #ddd;
+            background-color: #3f9e40;
         }
         button:active {
-            background-color: #ccc;
+            background-color: #2d6b2c;
+        }
+        button.operator {
+            background-color: #f44336;
+        }
+        button.operator:hover {
+            background-color: #d3372b;
+        }
+        button.operator:active {
+            background-color: #98231c;
+        }
+        button.equal {
+            background-color: #2196f3;
+        }
+        button.equal:hover {
+            background-color: #1976d2;
+        }
+        button.equal:active {
+            background-color: #0d47a1;
         }
     </style>
 </head>
@@ -53,21 +74,21 @@
         <button onclick="addNumber(7)">7</button>
         <button onclick="addNumber(8)">8</button>
         <button onclick="addNumber(9)">9</button>
-        <button onclick="addOperator('/')">/</button>
+        <button onclick="addOperator('/')" class="operator">/</button>
         <button onclick="addNumber(4)">4</button>
         <button onclick="addNumber(5)">5</button>
         <button onclick="addNumber(6)">6</button>
-        <button onclick="addOperator('*')">*</button>
+        <button onclick="addOperator('*')" class="operator">*</button>
         <button onclick="addNumber(1)">1</button>
         <button onclick="addNumber(2)">2</button>
         <button onclick="addNumber(3)">3</button>
-        <button onclick="addOperator('-')">-</button>
+        <button onclick="addOperator('-')" class="operator">-</button>
         <button onclick="addNumber(0)">0</button>
         <button onclick="addDecimalPoint()">.</button>
         <button onclick="deleteLastDigit()">&larr;</button>
-        <button onclick="addOperator('+')">+</button>
+        <button onclick="addOperator('+')" class="operator">+</button>
         <button onclick="clearDisplay()" style="grid-column: span 2">C</button>
-        <button onclick="calculateResult()" style="grid-column: span 2">=</button>
+        <button onclick="calculateResult()" style="grid-column: span 2" class="equal">=</button>
     </div>
     <script src="calculatrice.js"></script>
 </body>
